@@ -9,16 +9,17 @@ export default function Dobra1Hero({ onNext }: Props) {
   return (
     <div className="w-full relative pt-2 pb-2 md:pt-4 md:pb-6 text-center z-10 space-y-6 md:space-y-8">
       
-      {/* Syne Display Title matching the requested minimal style */}
-      <h1 className="text-3.5xl sm:text-5xl md:text-6.5xl font-heading font-extrabold uppercase tracking-tight leading-[1.08] text-white max-w-4xl mx-auto">
+      {/* Syne Display Title matching the requested minimal style with wide layout */}
+      <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-extrabold uppercase tracking-tight leading-[1.05] text-white max-w-5xl mx-auto px-4">
         O PRÓXIMO NÍVEL<br />
         DO SEU<br />
         <span className="text-[#19ffa2]">FATURAMENTO DIGITAL</span>
       </h1>
 
       {/* Highly shortened minimal explanation / textinho formatted in exactly 2 lines on desktop */}
-      <p className="font-sans text-xs md:text-sm text-zinc-350 max-w-3xl mx-auto leading-relaxed px-4">
-        Você foca em gerar conteúdo de valor e autoridade. Nós assumimos toda a complexidade técnica:<br className="hidden md:inline" /> do copywriting e páginas de carregamento sub-segundo à otimização constante de campanhas de tráfego.
+      <p className="font-sans text-xs md:text-sm text-zinc-350 max-w-4xl mx-auto leading-relaxed px-4">
+        Você foca em gerar conteúdo de valor e autoridade. Nós assumimos toda a complexidade técnica:<br className="hidden md:inline" />
+        do copywriting e páginas de carregamento sub-segundo à otimização constante de campanhas de tráfego.
       </p>
 
       {/* Large Loose-standing Placas Image (No wrappers, no containers, completely loose and raw) */}
@@ -30,7 +31,7 @@ export default function Dobra1Hero({ onNext }: Props) {
           className="w-full h-auto object-contain block mx-auto transition-transform duration-500 hover:scale-[1.01]"
         />
         <p className="text-[10px] text-zinc-500 mt-3 uppercase tracking-widest font-mono">
-          Validação Real • R$ 3M+ Faturados em Lançamentos Ativos
+          Validação Real • R$ 3M+ Faturados
         </p>
       </div>
 
