@@ -12,8 +12,8 @@ export default function Dobra1Hero({ onNext }: Props) {
       {/* Syne Display Title matching the requested minimal style with wide layout */}
       <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-extrabold uppercase tracking-tight leading-[1.05] text-white max-w-5xl mx-auto px-4">
         O PRÓXIMO NÍVEL<br />
-        DO SEU<br />
-        <span className="text-[#19ffa2]">FATURAMENTO DIGITAL</span>
+        DO SEU FATURAMENTO<br />
+        <span className="text-[#19ffa2]">DIGITAL</span>
       </h1>
 
       {/* Highly shortened minimal explanation / textinho formatted in exactly 2 lines on desktop */}
