@@ -14,7 +14,7 @@ export default function Dobra2VSL({ onNext }: Props) {
 
   return (
     <div className="relative text-white py-12 md:py-24">
-      <div className="space-y-24">
+      <div className="space-y-20">
         
         {/* Minimal Clear Section Header */}
         <div className="space-y-3 max-w-2xl text-left">
@@ -31,7 +31,7 @@ export default function Dobra2VSL({ onNext }: Props) {
         </div>
 
         {/* 3 Case Study Rows with Alternate Grid Layouts and 6 Loose Images */}
-        <div className="space-y-28">
+        <div className="space-y-24">
 
           {/* Row 1: Cariani (Text Left, Image Right) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
@@ -51,18 +51,30 @@ export default function Dobra2VSL({ onNext }: Props) {
               </div>
             </div>
 
-            {/* Loose Image column (No bulky containers) */}
+            {/* Loose Image with seamless cross-fade transition */}
             <div 
-              className="relative aspect-video w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#1B4D3E]/10"
+              className="relative aspect-[16/10] w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/10"
               onMouseEnter={() => setHoverCariani(true)}
               onMouseLeave={() => setHoverCariani(false)}
               onTouchStart={() => setHoverCariani(!hoverCariani)}
             >
+              {/* Image 1: Instagram (Base) */}
               <img
-                src={hoverCariani ? IMAGES.vslCariani : IMAGES.instaRenato}
-                alt="Case Renato Cariani"
+                src={IMAGES.instaRenato}
+                alt="Feed Renato Cariani"
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover transition-opacity duration-300"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+                  hoverCariani ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              {/* Image 2: VSL (Hovered) */}
+              <img
+                src={IMAGES.vslCariani}
+                alt="VSL Renato Cariani"
+                referrerPolicy="no-referrer"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+                  hoverCariani ? "opacity-100" : "opacity-0"
+                }`}
               />
             </div>
 
@@ -71,18 +83,30 @@ export default function Dobra2VSL({ onNext }: Props) {
           {/* Row 2: Guto (Image Left, Text Right) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             
-            {/* Loose Image column (No bulky containers) - Rendered Left first */}
+            {/* Loose Image with seamless cross-fade transition - Rendered Left */}
             <div 
-              className="relative aspect-video w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#1B4D3E]/10 order-2 md:order-1"
+              className="relative aspect-[16/10] w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/10 order-2 md:order-1"
               onMouseEnter={() => setHoverGuto(true)}
               onMouseLeave={() => setHoverGuto(false)}
               onTouchStart={() => setHoverGuto(!hoverGuto)}
             >
+              {/* Image 3: Instagram (Base) */}
               <img
-                src={hoverGuto ? IMAGES.vslGuto : IMAGES.instaGuto}
-                alt="Case Guto Galamba"
+                src={IMAGES.instaGuto}
+                alt="Feed Guto Galamba"
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover transition-opacity duration-300"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+                  hoverGuto ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              {/* Image 4: VSL (Hovered) */}
+              <img
+                src={IMAGES.vslGuto}
+                alt="VSL Guto Galamba"
+                referrerPolicy="no-referrer"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+                  hoverGuto ? "opacity-100" : "opacity-0"
+                }`}
               />
             </div>
 
@@ -121,18 +145,30 @@ export default function Dobra2VSL({ onNext }: Props) {
               </div>
             </div>
 
-            {/* Loose Image column (No bulky containers) */}
+            {/* Loose Image with seamless cross-fade transition */}
             <div 
-              className="relative aspect-video w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#1B4D3E]/10"
+              className="relative aspect-[16/10] w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/10"
               onMouseEnter={() => setHoverIsa(true)}
               onMouseLeave={() => setHoverIsa(false)}
               onTouchStart={() => setHoverIsa(!hoverIsa)}
             >
+              {/* Image 5: Instagram (Base) */}
               <img
-                src={hoverIsa ? IMAGES.vslIsa : IMAGES.instaIsadora}
-                alt="Case Isadora Nogueira"
+                src={IMAGES.instaIsadora}
+                alt="Feed Isadora Nogueira"
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover transition-opacity duration-300"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+                  hoverIsa ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              {/* Image 6: VSL (Hovered) */}
+              <img
+                src={IMAGES.vslIsa}
+                alt="VSL Isadora Nogueira"
+                referrerPolicy="no-referrer"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+                  hoverIsa ? "opacity-100" : "opacity-0"
+                }`}
               />
             </div>
 

@@ -84,7 +84,7 @@ export default function App() {
       </div>
 
       {/* Main Continuous Canvas Stage */}
-      <main className="relative pt-24">
+      <main className="relative pt-16 md:pt-20">
         
         {/* Glow Effects backdrop layout */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-zinc-900/20 rounded-full blur-[160px] pointer-events-none" />
@@ -92,9 +92,9 @@ export default function App() {
         {/* 1st dob - Faturamento / Intro */}
         <section 
           id="faturamento" 
-          className="scroll-mt-28 py-12 lg:py-24 border-b border-zinc-900/50 bg-cover bg-center bg-no-repeat relative"
+          className="scroll-mt-28 pt-2 pb-6 md:pt-4 md:pb-10 border-b border-zinc-900/50 bg-cover bg-center bg-no-repeat relative"
           style={{
-            backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.95)), url('bk.png')"
+            backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.95) 100%), url('https://dominus.site/slides/mariana/img/bk.png')"
           }}
         >
           {/* Subtle glow underneath */}
