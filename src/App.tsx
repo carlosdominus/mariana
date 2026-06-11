@@ -25,11 +25,9 @@ export default function App() {
   }, []);
 
   const navLinks = [
-    { label: "Prova Visual", href: "#faturamento" },
-    { label: "VSL", href: "#vsl" },
-    { label: "Upsell", href: "#upsell" },
-    { label: "Quem Somos", href: "#equipe" },
-    { label: "3 Segundos & QA", href: "#ganchos" },
+    { label: "Quem Somos", href: "#faturamento" },
+    { label: "O Método VSL", href: "#vsl" },
+    { label: "Aplicando para Você", href: "#ganchos" },
   ];
 
   return (

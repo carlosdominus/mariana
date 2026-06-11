@@ -23,7 +23,7 @@ export default function Dobra2VSL({ onNext }: Props) {
             Mecanismo de Conversão
           </div>
           <h2 className="text-3xl md:text-5xl font-heading font-extrabold uppercase tracking-tight leading-none text-white">
-            PÁGINAS VSL EM PARCERIAS DE ESCALA
+            QUEM ESTÁ UTILIZANDO VSL?
           </h2>
           <p className="font-sans text-[#F1F1F1]/70 text-xs md:text-sm leading-relaxed max-w-lg">
             Direcionar público frio diretamente para checkout reduz sua margem. Nossa metodologia converte audiência em desejo de compra antes da oferta.
@@ -43,27 +43,30 @@ export default function Dobra2VSL({ onNext }: Props) {
                 Renato Cariani
               </h3>
               <p className="font-sans text-xs md:text-sm text-zinc-400 leading-relaxed max-w-md">
-                Unimos a potência do maior influenciador fitness do Brasil a um funil focado em auto-comprometimento de público. O resultado é a conversão em massa sem perdas de tráfego.
+                Unindo a potência do maior influenciador fitness do Brasil a um funil de VSL e alta escala. O resultado é a conversão em massa e multiplos 8 Digitos gerados todos os meses.
               </p>
               <div className="flex items-center gap-1.5 text-[9.5px] font-mono text-[#19ffa2] uppercase tracking-wider">
                 <Play size={10} className="animate-pulse" />
-                <span>Passe o mouse na imagem para ver o ambiente da VSL</span>
+                <span>Passe o mouse para ver a VSL e clique para abrir a página</span>
               </div>
             </div>
 
-            {/* Loose Image with seamless cross-fade transition */}
-            <div 
-              className="relative aspect-[16/10] w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/10"
+            {/* Loose Image with seamless cross-fade transition wrapped in redirect link */}
+            <a 
+              href="https://cariani.com.br/secabarriga-vsl-d35/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#19ffa2]/15 border border-white/10"
               onMouseEnter={() => setHoverCariani(true)}
               onMouseLeave={() => setHoverCariani(false)}
               onTouchStart={() => setHoverCariani(!hoverCariani)}
             >
-              {/* Image 1: Instagram (Base) */}
+              {/* Image 1: Profile (Base) */}
               <img
-                src={IMAGES.instaRenato}
-                alt="Feed Renato Cariani"
+                src="https://dominus.site/slides/mariana/img/insta-cariani.png"
+                alt="Renato Cariani"
                 referrerPolicy="no-referrer"
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+                className={`w-full h-auto block transition-opacity duration-500 ease-in-out ${
                   hoverCariani ? "opacity-0" : "opacity-100"
                 }`}
               />
@@ -76,26 +79,29 @@ export default function Dobra2VSL({ onNext }: Props) {
                   hoverCariani ? "opacity-100" : "opacity-0"
                 }`}
               />
-            </div>
+            </a>
 
           </div>
 
           {/* Row 2: Guto (Image Left, Text Right) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             
-            {/* Loose Image with seamless cross-fade transition - Rendered Left */}
-            <div 
-              className="relative aspect-[16/10] w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/10 order-2 md:order-1"
+            {/* Loose Image with seamless cross-fade transition wrapped in redirect link - Rendered Left */}
+            <a 
+              href="https://rmkt.gutogalamba.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#19ffa2]/15 border border-white/10 order-2 md:order-1"
               onMouseEnter={() => setHoverGuto(true)}
               onMouseLeave={() => setHoverGuto(false)}
               onTouchStart={() => setHoverGuto(!hoverGuto)}
             >
-              {/* Image 3: Instagram (Base) */}
+              {/* Image 3: Profile (Base) */}
               <img
-                src={IMAGES.instaGuto}
-                alt="Feed Guto Galamba"
+                src="https://dominus.site/slides/mariana/img/insta-galamba.png"
+                alt="Guto Galamba"
                 referrerPolicy="no-referrer"
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+                className={`w-full h-auto block transition-opacity duration-500 ease-in-out ${
                   hoverGuto ? "opacity-0" : "opacity-100"
                 }`}
               />
@@ -108,7 +114,7 @@ export default function Dobra2VSL({ onNext }: Props) {
                   hoverGuto ? "opacity-100" : "opacity-0"
                 }`}
               />
-            </div>
+            </a>
 
             {/* Text column - Rendered Right */}
             <div className="space-y-4 order-1 md:order-2">
@@ -117,11 +123,11 @@ export default function Dobra2VSL({ onNext }: Props) {
                 Guto Galamba
               </h3>
               <p className="font-sans text-xs md:text-sm text-zinc-400 leading-relaxed max-w-md">
-                Decomposição direta de crenças limitantes. O roteiro da VSL guia o espectador de forma lógica e irrecusável pelo método exclusivo de desenvolvimento do Guto.
+                O roteiro da VSL guia o espectador de forma lógica e irrecusável pelo método exclusivo de desenvolvimento do Guto. Embalando a proposta unica e personalizada em um treinamento completo.
               </p>
               <div className="flex items-center gap-1.5 text-[9.5px] font-mono text-[#19ffa2] uppercase tracking-wider">
                 <Play size={10} className="animate-pulse" />
-                <span>Passe o mouse na imagem para ver o ambiente da VSL</span>
+                <span>Passe o mouse para ver a VSL e clique para abrir a página</span>
               </div>
             </div>
 
@@ -137,27 +143,30 @@ export default function Dobra2VSL({ onNext }: Props) {
                 Isadora Nogueira
               </h3>
               <p className="font-sans text-xs md:text-sm text-zinc-400 leading-relaxed max-w-md">
-                Otimização perfeita entre retenção visual do feed do Instagram e páginas de escala de carregamento ultrassônico. Menos fricção, mais lucratividade diária.
+                Com anuncios inteligentes e personalizados, Isadora conecta sua audiência a um funil de VSL promovendo seu info-produto através dos metodos que compartilha no instagram.
               </p>
               <div className="flex items-center gap-1.5 text-[9.5px] font-mono text-[#19ffa2] uppercase tracking-wider">
                 <Play size={10} className="animate-pulse" />
-                <span>Passe o mouse na imagem para ver o ambiente da VSL</span>
+                <span>Passe o mouse para ver a VSL e clique para abrir a página</span>
               </div>
             </div>
 
-            {/* Loose Image with seamless cross-fade transition */}
-            <div 
-              className="relative aspect-[16/10] w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/10"
+            {/* Loose Image with seamless cross-fade transition wrapped in redirect link */}
+            <a 
+              href="https://protocolorestart.com/vsl-protocolo-restart-ab-ml-v2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#19ffa2]/15 border border-white/10"
               onMouseEnter={() => setHoverIsa(true)}
               onMouseLeave={() => setHoverIsa(false)}
               onTouchStart={() => setHoverIsa(!hoverIsa)}
             >
-              {/* Image 5: Instagram (Base) */}
+              {/* Image 5: Profile (Base) */}
               <img
-                src={IMAGES.instaIsadora}
-                alt="Feed Isadora Nogueira"
+                src="https://dominus.site/slides/mariana/img/insta-isadora.png"
+                alt="Isadora Nogueira"
                 referrerPolicy="no-referrer"
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+                className={`w-full h-auto block transition-opacity duration-500 ease-in-out ${
                   hoverIsa ? "opacity-0" : "opacity-100"
                 }`}
               />
@@ -170,7 +179,7 @@ export default function Dobra2VSL({ onNext }: Props) {
                   hoverIsa ? "opacity-100" : "opacity-0"
                 }`}
               />
-            </div>
+            </a>
 
           </div>
 
@@ -180,9 +189,9 @@ export default function Dobra2VSL({ onNext }: Props) {
         <div className="pt-6 text-center">
           <button 
             onClick={onNext}
-            className="text-[10px] text-zinc-500 font-mono tracking-widest uppercase hover:text-white transition duration-300 cursor-pointer"
+            className="text-[10px] text-[#19ffa2] font-mono tracking-widest uppercase hover:text-white transition duration-300 font-bold cursor-pointer"
           >
-            Avançar para Rentabilidade de Checkout ➜
+            Avançar
           </button>
         </div>
 
