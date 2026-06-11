@@ -42,12 +42,12 @@ export default function Dobra4Equipe({ onNext }: Props) {
 
   return (
     <div 
-      className="relative text-white py-12 md:py-24 bg-gradient-to-b from-[#020d08] via-[#052b1b] to-[#010604] border-y border-[#19ffa2]/15 overflow-hidden" 
+      className="relative text-white py-12 md:py-20 overflow-hidden" 
       id="dobra4-container"
     >
-      {/* Decorative background lights */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#19ffa2]/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#19ffa2]/5 rounded-full blur-[100px] pointer-events-none" />
+      {/* Decorative background lights - Enhanced emerald glow */}
+      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#19ffa2]/20 rounded-full blur-[160px] pointer-events-none animate-pulse duration-[8000ms]" />
+      <div className="absolute bottom-[15%] right-[10%] w-[500px] h-[500px] bg-[#19ffa2]/8 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Category Header Badge */}
       <div className="relative z-10 space-y-4 max-w-4xl mx-auto text-center mb-10 md:mb-16 px-4">
@@ -68,7 +68,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
           
           {/* Header section with Instagram Link */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1">
-            <h3 className="text-xl md:text-2xl lg:text-[26px] font-heading font-extrabold uppercase text-white tracking-wide leading-[1.1]">
+            <h3 className="text-xl md:text-2xl lg:text-[26px] font-heading font-extrabold uppercase text-white tracking-wide leading-[1.1] min-w-0 md:min-w-[340px]">
               Os melhores<br />
               conteúdos do<br />
               seu perfil.
@@ -162,7 +162,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
           
           {/* Header section with Instagram Link */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1">
-            <h3 className="text-xl md:text-2xl lg:text-[26px] font-heading font-extrabold uppercase text-white tracking-wide leading-[1.1]">
+            <h3 className="text-xl md:text-2xl lg:text-[26px] font-heading font-extrabold uppercase text-white tracking-wide leading-[1.1] min-w-0 md:min-w-[340px]">
               Porque grandes<br />
               perfís sempre<br />
               viralizam?

@@ -137,12 +137,10 @@ export default function App() {
 
         {/* 5th dob - A Parceria e Escopo de Trabalho */}
         <section id="oferta" className="scroll-mt-28 py-12 lg:py-20 border-b border-zinc-900/50">
-          <div className="max-w-6xl mx-auto px-4">
-            <Dobra5Oferta
-              onNext={() => document.getElementById("proposta")?.scrollIntoView({ behavior: "smooth" })}
-              onPrev={() => document.getElementById("equipe")?.scrollIntoView({ behavior: "smooth" })}
-            />
-          </div>
+          <Dobra5Oferta
+            onNext={() => document.getElementById("proposta")?.scrollIntoView({ behavior: "smooth" })}
+            onPrev={() => document.getElementById("equipe")?.scrollIntoView({ behavior: "smooth" })}
+          />
         </section>
 
         {/* 6th dob - Simulador de Alocação de Ganhos e Pitch Final */}
