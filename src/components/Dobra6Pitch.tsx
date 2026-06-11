@@ -22,10 +22,10 @@ export default function Dobra6Pitch({ onPrev }: Props) {
   // Expert percent on Faturamento (Default 15%)
   const [expertPercentFaturamento, setExpertPercentFaturamento] = useState<number>(15);
 
-  // Profit Split Type: "2" (50% / 50%) | "3" (33.3% / 33.3% / 33.3%) | "custom"
-  const [partnerDivision, setPartnerDivision] = useState<string>("3");
-  // Expert percent on profit (Default 33.33% or 50% depending on division or custom)
-  const [expertPercentLucro, setExpertPercentLucro] = useState<number>(33.33);
+  // Profit Split Type: "2" (50% / 50%) | "custom"
+  const [partnerDivision, setPartnerDivision] = useState<string>("2");
+  // Expert percent on profit (Default 50% depending on division or custom)
+  const [expertPercentLucro, setExpertPercentLucro] = useState<number>(50);
 
   // Selected active platform for fees calculations
   const [selectedPlatform, setSelectedPlatform] = useState<"kiwify" | "eduzz" | "hotmart">("kiwify");
@@ -105,7 +105,6 @@ export default function Dobra6Pitch({ onPrev }: Props) {
   
   let currentExpertLucroPercent = expertPercentLucro;
   if (partnerDivision === "2") currentExpertLucroPercent = 50;
-  else if (partnerDivision === "3") currentExpertLucroPercent = 33.33;
 
   const expertShareLucro = netProfitTotal * (currentExpertLucroPercent / 100);
 
@@ -383,19 +382,6 @@ export default function Dobra6Pitch({ onPrev }: Props) {
                         }`}
                       >
                         2 Sócios (50/50)
-                      </button>
-                      <button
-                        onClick={() => {
-                          setPartnerDivision("3");
-                          setExpertPercentLucro(33.33);
-                        }}
-                        className={`text-[9.5px] font-sans font-extrabold uppercase py-1.5 px-3.5 rounded-full tracking-wider transition cursor-pointer ${
-                          partnerDivision === "3"
-                            ? "bg-white text-black font-black"
-                            : "text-zinc-400 hover:text-white"
-                        }`}
-                      >
-                        3 Sócios (33% Cada)
                       </button>
                       <button
                         onClick={() => setPartnerDivision("custom")}
