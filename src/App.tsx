@@ -7,6 +7,7 @@ import Dobra3Upsell from "./components/Dobra3Upsell";
 import Dobra4Equipe from "./components/Dobra4Equipe";
 import Dobra5Oferta from "./components/Dobra5Oferta";
 import Dobra6Pitch from "./components/Dobra6Pitch";
+import Dobra7LogoAnimation from "./components/Dobra7LogoAnimation";
 
 export default function App() {
   const [activeLever, setActiveLever] = useState<number>(1);
@@ -161,6 +162,9 @@ export default function App() {
           </div>
         </section>
 
+        {/* 7th dob - Premium Particle Logo Animation */}
+        <Dobra7LogoAnimation />
+
       </main>
 
       {/* Elegant CTA Footer bar */}
@@ -183,15 +187,15 @@ export default function App() {
             <h4 className="text-[10px] font-mono text-zinc-500 uppercase tracking-wildest">Metas da Parceria</h4>
             <ul className="text-xs text-zinc-400 space-y-1.5 font-medium font-sans">
               <li className="flex items-center gap-1.5">
-                <span className="w-1 h-1 bg-[#19ffa2] rounded-full" />
+                <span className="w-1 h-1 bg-[#41F20A] rounded-full" />
                 Dobra dos ganhos mensais de forma imediata via Upsell
               </li>
               <li className="flex items-center gap-1.5">
-                <span className="w-1 h-1 bg-[#19ffa2] rounded-full" />
+                <span className="w-1 h-1 bg-[#41F20A] rounded-full" />
                 Escala de 10x na entrega orgânica através de ganchos de 3s
               </li>
               <li className="flex items-center gap-1.5">
-                <span className="w-1 h-1 bg-[#19ffa2] rounded-full" />
+                <span className="w-1 h-1 bg-[#41F20A] rounded-full" />
                 Estruturação do roteiro VSL de alta conversão
               </li>
             </ul>
@@ -204,7 +208,7 @@ export default function App() {
                 href="mailto:contacto@dominus.site" 
                 className="flex items-center gap-2 text-xs text-zinc-300 hover:text-white transition font-sans"
               >
-                <Mail size={13} className="text-[#19ffa2]" />
+                <Mail size={13} className="text-[#41F20A]" />
                 <span>contacto@dominus.site</span>
               </a>
               <div className="text-[10px] text-zinc-500 font-mono">

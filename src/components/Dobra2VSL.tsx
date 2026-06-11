@@ -18,8 +18,8 @@ export default function Dobra2VSL({ onNext }: Props) {
         
         {/* Minimal Clear Section Header */}
         <div className="space-y-3 max-w-2xl text-left">
-          <div className="inline-flex items-center gap-2 text-[#19ffa2] text-[10px] font-semibold tracking-widest uppercase font-mono">
-            <span className="w-1 h-1 rounded-full bg-[#19ffa2] animate-pulse" />
+          <div className="inline-flex items-center gap-2 text-[#41F20A] text-[10px] font-semibold tracking-widest uppercase font-mono">
+            <span className="w-1 h-1 rounded-full bg-[#41F20A] animate-pulse" />
             Mecanismo de Conversão
           </div>
           <h2 className="text-3xl md:text-5xl font-heading font-extrabold uppercase tracking-tight leading-none text-white">
@@ -45,7 +45,7 @@ export default function Dobra2VSL({ onNext }: Props) {
               <p className="font-sans text-xs md:text-sm text-zinc-400 leading-relaxed max-w-md">
                 Unindo a potência do maior influenciador fitness do Brasil a um funil de VSL e alta escala. O resultado é a conversão em massa e multiplos 8 Digitos gerados todos os meses.
               </p>
-              <div className="flex items-center gap-1.5 text-[9.5px] font-mono text-[#19ffa2] uppercase tracking-wider">
+              <div className="flex items-center gap-1.5 text-[9.5px] font-mono text-[#41F20A] uppercase tracking-wider">
                 <Play size={10} className="animate-pulse" />
                 <span>Passe o mouse para ver a VSL e clique para abrir a página</span>
               </div>
@@ -56,7 +56,7 @@ export default function Dobra2VSL({ onNext }: Props) {
               href="https://cariani.com.br/secabarriga-vsl-d35/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative block w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#19ffa2]/15 border border-white/10"
+              className="relative block w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#41F20A]/15 border border-white/10"
               onMouseEnter={() => setHoverCariani(true)}
               onMouseLeave={() => setHoverCariani(false)}
               onTouchStart={() => setHoverCariani(!hoverCariani)}
@@ -91,7 +91,7 @@ export default function Dobra2VSL({ onNext }: Props) {
               href="https://rmkt.gutogalamba.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative block w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#19ffa2]/15 border border-white/10 order-2 md:order-1"
+              className="relative block w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#41F20A]/15 border border-white/10 order-2 md:order-1"
               onMouseEnter={() => setHoverGuto(true)}
               onMouseLeave={() => setHoverGuto(false)}
               onTouchStart={() => setHoverGuto(!hoverGuto)}
@@ -125,7 +125,7 @@ export default function Dobra2VSL({ onNext }: Props) {
               <p className="font-sans text-xs md:text-sm text-zinc-400 leading-relaxed max-w-md">
                 O roteiro da VSL guia o espectador de forma lógica e irrecusável pelo método exclusivo de desenvolvimento do Guto. Embalando a proposta unica e personalizada em um treinamento completo.
               </p>
-              <div className="flex items-center gap-1.5 text-[9.5px] font-mono text-[#19ffa2] uppercase tracking-wider">
+              <div className="flex items-center gap-1.5 text-[9.5px] font-mono text-[#41F20A] uppercase tracking-wider">
                 <Play size={10} className="animate-pulse" />
                 <span>Passe o mouse para ver a VSL e clique para abrir a página</span>
               </div>
@@ -145,7 +145,7 @@ export default function Dobra2VSL({ onNext }: Props) {
               <p className="font-sans text-xs md:text-sm text-zinc-400 leading-relaxed max-w-md">
                 Com anuncios inteligentes e personalizados, Isadora conecta sua audiência a um funil de VSL promovendo seu info-produto através dos metodos que compartilha no instagram.
               </p>
-              <div className="flex items-center gap-1.5 text-[9.5px] font-mono text-[#19ffa2] uppercase tracking-wider">
+              <div className="flex items-center gap-1.5 text-[9.5px] font-mono text-[#41F20A] uppercase tracking-wider">
                 <Play size={10} className="animate-pulse" />
                 <span>Passe o mouse para ver a VSL e clique para abrir a página</span>
               </div>
@@ -156,7 +156,7 @@ export default function Dobra2VSL({ onNext }: Props) {
               href="https://protocolorestart.com/vsl-protocolo-restart-ab-ml-v2/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative block w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#19ffa2]/15 border border-white/10"
+              className="relative block w-full overflow-hidden cursor-pointer rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#41F20A]/15 border border-white/10"
               onMouseEnter={() => setHoverIsa(true)}
               onMouseLeave={() => setHoverIsa(false)}
               onTouchStart={() => setHoverIsa(!hoverIsa)}
@@ -189,7 +189,7 @@ export default function Dobra2VSL({ onNext }: Props) {
         <div className="pt-6 text-center">
           <button 
             onClick={onNext}
-            className="text-[10px] text-[#19ffa2] font-mono tracking-widest uppercase hover:text-white transition duration-300 font-bold cursor-pointer"
+            className="text-[10px] text-[#41F20A] font-mono tracking-widest uppercase hover:text-white transition duration-300 font-bold cursor-pointer"
           >
             Avançar
           </button>

@@ -17,19 +17,19 @@ export default function Dobra1Hero({ onNext }: Props) {
         {/* Gilberto Column */}
         <div className="flex flex-col items-center space-y-3">
           <div className="relative group w-full max-w-sm">
-            <div className="absolute inset-0 bg-[#19ffa2]/10 rounded-3xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-[#41F20A]/10 rounded-3xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <img 
               src="https://dominus.site/slides/mariana/img/gil.png"
               alt="Gilberto Ortiz"
               referrerPolicy="no-referrer"
-              className="w-full aspect-square rounded-3xl object-cover relative border border-white/10 hover:border-[#19ffa2]/30 transition-all duration-300 shadow-2xl"
+              className="w-full aspect-square rounded-3xl object-cover relative border border-white/10 hover:border-[#41F20A]/30 transition-all duration-300 shadow-2xl"
             />
           </div>
           <div className="space-y-1">
             <h3 className="text-md md:text-lg font-heading font-extrabold uppercase text-white tracking-wide">
               Gilberto Ortiz
             </h3>
-            <p className="text-[#19ffa2] text-[9px] uppercase tracking-widest font-mono font-semibold">
+            <p className="text-[#41F20A] text-[9px] uppercase tracking-widest font-mono font-semibold">
               CEO & Copywriter
             </p>
           </div>
@@ -41,19 +41,19 @@ export default function Dobra1Hero({ onNext }: Props) {
         {/* Felipe Column */}
         <div className="flex flex-col items-center space-y-3">
           <div className="relative group w-full max-w-sm">
-            <div className="absolute inset-0 bg-[#19ffa2]/10 rounded-3xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-[#41F20A]/10 rounded-3xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <img 
               src="https://dominus.site/slides/mariana/img/felipe.jpg"
               alt="Felipe Martins"
               referrerPolicy="no-referrer"
-              className="w-full aspect-square rounded-3xl object-cover relative border border-white/10 hover:border-[#19ffa2]/30 transition-all duration-300 shadow-2xl"
+              className="w-full aspect-square rounded-3xl object-cover relative border border-white/10 hover:border-[#41F20A]/30 transition-all duration-300 shadow-2xl"
             />
           </div>
           <div className="space-y-1">
             <h3 className="text-md md:text-lg font-heading font-extrabold uppercase text-white tracking-wide">
               Felipe Martins
             </h3>
-            <p className="text-[#19ffa2] text-[9px] uppercase tracking-widest font-mono font-semibold">
+            <p className="text-[#41F20A] text-[9px] uppercase tracking-widest font-mono font-semibold">
               Coprodutor & Gestor
             </p>
           </div>
@@ -81,7 +81,7 @@ export default function Dobra1Hero({ onNext }: Props) {
           className="inline-flex flex-col items-center gap-1.5 text-[9px] font-semibold tracking-widest text-[#F1F1F1]/50 hover:text-white transition duration-300 shortcut flex cursor-pointer"
         >
           <span className="uppercase font-mono">Conheça Nossos Funis VSL</span>
-          <ArrowDown size={11} className="animate-bounce text-[#19ffa2] mt-0.5" />
+          <ArrowDown size={11} className="animate-bounce text-[#41F20A] mt-0.5" />
         </button>
       </div>
 

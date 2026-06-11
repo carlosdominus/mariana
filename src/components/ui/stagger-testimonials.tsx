@@ -17,7 +17,7 @@ const teamMembers: TeamMember[] = [
     tempId: 0,
     testimonial: "CEO do Grupo Dominus e estrategista. Lidera a união perfeita de dados sob tráfego frio e psicologia humana para gerar faturamentos exponenciais.",
     by: "Gilberto Ortiz",
-    role: "Tráfego, Copy e Gestão",
+    role: "Copy e Gestão",
     imgSrc: "https://dominus.site/slides/mariana/img/gil.png"
   },
   {
@@ -92,8 +92,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       className={cn(
         "absolute left-1/2 top-1/2 cursor-pointer border-2 p-6 transition-all duration-500 ease-in-out select-none rounded-[24px]",
         isCenter 
-          ? "z-20 bg-[#19ffa2] text-black border-[#19ffa2] font-semibold" 
-          : "z-0 bg-zinc-950 text-zinc-300 border-zinc-900 hover:border-[#19ffa2]/40"
+          ? "z-20 bg-[#41F20A] text-black border-[#41F20A] font-semibold" 
+          : "z-0 bg-zinc-950 text-zinc-300 border-zinc-900 hover:border-[#41F20A]/40"
       )}
       style={{
         width: cardSize,
@@ -104,7 +104,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           translateY(${isCenter ? -70 : position % 2 ? 15 : -15}px)
           rotate(${isCenter ? 0 : position % 2 ? 3 : -3}deg)
         `,
-        boxShadow: isCenter ? "0px 10px 30px rgba(25, 255, 162, 0.22)" : "0px 5px 15px rgba(0,0,0,0.6)"
+        boxShadow: isCenter ? "0px 10px 30px rgba(65, 242, 10, 0.22)" : "0px 5px 15px rgba(0,0,0,0.6)"
       }}
     >
       
@@ -127,7 +127,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           </h4>
           <span className={cn(
             "text-[9px] uppercase tracking-widest font-mono font-black",
-            isCenter ? "text-black/75" : "text-[#19ffa2]"
+            isCenter ? "text-black/75" : "text-[#41F20A]"
           )}>
             {testimonial.role}
           </span>
@@ -228,7 +228,7 @@ export const StaggerTestimonials: React.FC = () => {
           onClick={() => handleMove(-1)}
           className={cn(
             "flex h-11 w-11 items-center justify-center text-xl transition-all cursor-pointer rounded-xl",
-            "bg-zinc-950/90 border border-zinc-800 text-zinc-400 hover:text-[#19ffa2] hover:border-[#19ffa2]/40 active:scale-95"
+            "bg-zinc-950/90 border border-zinc-800 text-zinc-400 hover:text-[#41F20A] hover:border-[#41F20A]/40 active:scale-95"
           )}
           aria-label="Previous testimonial"
         >
@@ -238,7 +238,7 @@ export const StaggerTestimonials: React.FC = () => {
           onClick={() => handleMove(1)}
           className={cn(
             "flex h-11 w-11 items-center justify-center text-xl transition-all cursor-pointer rounded-xl",
-            "bg-zinc-950/90 border border-zinc-800 text-zinc-400 hover:text-[#19ffa2] hover:border-[#19ffa2]/40 active:scale-95"
+            "bg-zinc-950/90 border border-zinc-800 text-zinc-400 hover:text-[#41F20A] hover:border-[#41F20A]/40 active:scale-95"
           )}
           aria-label="Next testimonial"
         >

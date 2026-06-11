@@ -45,13 +45,13 @@ export default function Dobra4Equipe({ onNext }: Props) {
       className="relative text-white py-12 md:py-20 overflow-hidden" 
       id="dobra4-container"
     >
-      {/* Decorative background lights - Enhanced emerald glow */}
-      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#19ffa2]/20 rounded-full blur-[160px] pointer-events-none animate-pulse duration-[8000ms]" />
-      <div className="absolute bottom-[15%] right-[10%] w-[500px] h-[500px] bg-[#19ffa2]/8 rounded-full blur-[120px] pointer-events-none" />
+      {/* Decorative background lights - Enhanced brand glow */}
+      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#41F20A]/20 rounded-full blur-[160px] pointer-events-none animate-pulse duration-[8000ms]" />
+      <div className="absolute bottom-[15%] right-[10%] w-[500px] h-[500px] bg-[#41F20A]/8 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Category Header Badge */}
       <div className="relative z-10 space-y-4 max-w-4xl mx-auto text-center mb-10 md:mb-16 px-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#19ffa2]/10 border border-[#19ffa2]/35 text-[#19ffa2] text-[10px] font-bold tracking-widest rounded-full uppercase font-mono">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#41F20A]/10 border border-[#41F20A]/35 text-[#41F20A] text-[10px] font-bold tracking-widest rounded-full uppercase font-mono">
           <Sparkles size={11} className="animate-pulse" />
           Estudo de Caso Prático
         </div>
@@ -77,7 +77,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
               href="https://www.instagram.com/maricontinonutri/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#19ffa2] hover:text-white transition flex items-center gap-1.5 bg-[#19ffa2]/10 px-3 py-1 rounded-full border border-[#19ffa2]/20 shrink-0 self-start sm:self-auto"
+              className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#41F20A] hover:text-white transition flex items-center gap-1.5 bg-[#41F20A]/10 px-3 py-1 rounded-full border border-[#41F20A]/20 shrink-0 self-start sm:self-auto"
             >
               <Instagram size={11} />
               <span>@maricontinonutri</span>
@@ -116,7 +116,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
                 className="w-full h-full object-contain block mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
               />
               
-              <div className="absolute top-3 right-3 bg-black/85 backdrop-blur-md text-[8.5px] font-mono text-[#19ffa2] uppercase border border-[#19ffa2]/25 rounded-lg px-2.5 py-1 tracking-wider font-bold shadow-lg">
+              <div className="absolute top-3 right-3 bg-black/85 backdrop-blur-md text-[8.5px] font-mono text-[#41F20A] uppercase border border-[#41F20A]/25 rounded-lg px-2.5 py-1 tracking-wider font-bold shadow-lg">
                 Ver no Instagram ↗
               </div>
             </a>
@@ -125,7 +125,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
             <div className="flex items-center justify-between h-[36px] mt-2 px-1">
               <button 
                 onClick={prevMari}
-                className="p-1.5 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#19ffa2] transition active:scale-95 cursor-pointer"
+                className="p-1.5 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#41F20A] transition active:scale-95 cursor-pointer"
                 title="Slide Anterior"
               >
                 <ChevronLeft size={16} />
@@ -138,7 +138,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
                     key={idx}
                     onClick={() => setCurrentSlideMari(idx)}
                     className={`h-1.5 rounded-full transition-all duration-300 ${
-                      currentSlideMari === idx ? "w-6 bg-[#19ffa2]" : "w-1.5 bg-zinc-700 hover:bg-zinc-600"
+                      currentSlideMari === idx ? "w-6 bg-[#41F20A]" : "w-1.5 bg-zinc-700 hover:bg-zinc-600"
                     }`}
                   />
                 ))}
@@ -146,7 +146,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
 
               <button 
                 onClick={nextMari}
-                className="p-1.5 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#19ffa2] transition active:scale-95 cursor-pointer"
+                className="p-1.5 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#41F20A] transition active:scale-95 cursor-pointer"
                 title="Próximo Slide"
               >
                 <ChevronRight size={16} />
@@ -163,15 +163,15 @@ export default function Dobra4Equipe({ onNext }: Props) {
           {/* Header section with Instagram Link */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1">
             <h3 className="text-xl md:text-2xl lg:text-[26px] font-heading font-extrabold uppercase text-white tracking-wide leading-[1.1] min-w-0 md:min-w-[340px]">
-              Porque grandes<br />
-              perfís sempre<br />
-              viralizam?
+              <span className="whitespace-nowrap">Porque grandes</span><br />
+              <span className="whitespace-nowrap">perfís sempre</span><br />
+              <span className="whitespace-nowrap">viralizam?</span>
             </h3>
             <a 
               href="https://www.instagram.com/onutridasestrelas/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#19ffa2] hover:text-white transition flex items-center gap-1.5 bg-[#19ffa2]/10 px-3 py-1 rounded-full border border-[#19ffa2]/20 shrink-0 self-start sm:self-auto"
+              className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#41F20A] hover:text-white transition flex items-center gap-1.5 bg-[#41F20A]/10 px-3 py-1 rounded-full border border-[#41F20A]/20 shrink-0 self-start sm:self-auto"
             >
               <Instagram size={11} />
               <span>@onutridasestrelas</span>
@@ -210,7 +210,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
                 className="w-full h-full object-contain block mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
               />
               
-              <div className="absolute top-3 right-3 bg-black/85 backdrop-blur-md text-[8.5px] font-mono text-[#19ffa2] uppercase border border-[#19ffa2]/25 rounded-lg px-2.5 py-1 tracking-wider font-bold shadow-lg">
+              <div className="absolute top-3 right-3 bg-black/85 backdrop-blur-md text-[8.5px] font-mono text-[#41F20A] uppercase border border-[#41F20A]/25 rounded-lg px-2.5 py-1 tracking-wider font-bold shadow-lg">
                 Ver no Instagram ↗
               </div>
             </a>
@@ -219,7 +219,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
             <div className="flex items-center justify-between h-[36px] mt-2 px-1">
               <button 
                 onClick={prevBruno}
-                className="p-1.5 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#19ffa2] transition active:scale-95 cursor-pointer"
+                className="p-1.5 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#41F20A] transition active:scale-95 cursor-pointer"
                 title="Slide Anterior"
               >
                 <ChevronLeft size={16} />
@@ -232,7 +232,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
                     key={idx}
                     onClick={() => setCurrentSlideBruno(idx)}
                     className={`h-1.5 rounded-full transition-all duration-300 ${
-                      currentSlideBruno === idx ? "w-6 bg-[#19ffa2]" : "w-1.5 bg-zinc-750 hover:bg-zinc-650"
+                      currentSlideBruno === idx ? "w-6 bg-[#41F20A]" : "w-1.5 bg-zinc-750 hover:bg-zinc-650"
                     }`}
                   />
                 ))}
@@ -240,7 +240,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
 
               <button 
                 onClick={nextBruno}
-                className="p-1.5 rounded-xl bg-zinc-900 border border-[#19ffa2]/30 text-white hover:bg-zinc-850 hover:text-[#19ffa2] transition active:scale-95 cursor-pointer"
+                className="p-1.5 rounded-xl bg-zinc-900 border border-[#41F20A]/30 text-white hover:bg-zinc-850 hover:text-[#41F20A] transition active:scale-95 cursor-pointer"
                 title="Próximo Slide"
               >
                 <ChevronRight size={16} />
@@ -257,7 +257,7 @@ export default function Dobra4Equipe({ onNext }: Props) {
       <div className="relative z-10 pt-12 md:pt-16 text-center">
         <button 
           onClick={onNext}
-          className="inline-flex items-center gap-2.5 px-8 py-3 bg-[#19ffa2] hover:bg-[#15db8b] text-black font-extrabold text-xs tracking-wider uppercase rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#19ffa2]/20 scale-100 hover:scale-[1.02] active:scale-[0.98] select-none cursor-pointer"
+          className="inline-flex items-center gap-2.5 px-8 py-3 bg-[#41F20A] hover:bg-[#34c408] text-black font-extrabold text-xs tracking-wider uppercase rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#41F20A]/20 scale-100 hover:scale-[1.02] active:scale-[0.98] select-none cursor-pointer"
         >
           <span>Avançar</span>
           <ArrowRight size={13} className="text-black" />
