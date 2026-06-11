@@ -144,8 +144,17 @@ export default function App() {
         </section>
 
         {/* 6th dob - Simulador de Alocação de Ganhos e Pitch Final */}
-        <section id="proposta" className="scroll-mt-28 py-12 lg:py-24 bg-zinc-950/20">
-          <div className="max-w-6xl mx-auto px-4">
+        <section 
+          id="proposta" 
+          className="scroll-mt-28 py-12 lg:py-24 border-t border-zinc-900/20 bg-cover bg-center bg-no-repeat relative animate-fade-in"
+          style={{
+            backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.95) 100%), url('https://dominus.site/slides/mariana/img/bk.png')"
+          }}
+        >
+          {/* Subtle glow underneath */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70vw] h-[40vh] bg-[#1B4D3E]/10 rounded-full blur-[130px] pointer-events-none" />
+
+          <div className="max-w-6xl mx-auto px-4 relative z-10">
             <Dobra6Pitch
               onPrev={() => document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" })}
             />
