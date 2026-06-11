@@ -11,9 +11,9 @@ export default function Dobra4Equipe({ onNext }: Props) {
   const [currentSlideBruno, setCurrentSlideBruno] = useState(0);
 
   const mariSlides = [
-    "https://dominus.site/slides/mariana/img/110k.png",
-    "https://dominus.site/slides/mariana/img/4k.png",
-    "https://dominus.site/slides/mariana/img/29.9k.png",
+    "https://dominus.site/slides/mariana/img/110k.webp",
+    "https://dominus.site/slides/mariana/img/4k.webp",
+    "https://dominus.site/slides/mariana/img/29.9k.webp",
   ];
 
   const brunoSlides = [
