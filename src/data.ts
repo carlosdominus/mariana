@@ -3,7 +3,7 @@ import { ExpertProfile, TeamMember } from "./types";
 export const BASE_IMG_URL = "https://dominus.site/slides/mariana/img";
 
 export const IMAGES = {
-  placas: `${BASE_IMG_URL}/placas-h.png`,
+  placas: `${BASE_IMG_URL}/placas-hori_converted_converted.webp`,
   vslCariani: `${BASE_IMG_URL}/vsl-cariani.png`,
   vslGuto: `${BASE_IMG_URL}/vsl-guto.png`,
   vslIsa: `${BASE_IMG_URL}/vsl-isa.png`,
