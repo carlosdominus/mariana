@@ -16,13 +16,13 @@ export default function Dobra1Hero({ onNext }: Props) {
         
         {/* Gilberto Column */}
         <div className="flex flex-col items-center space-y-3">
-          <div className="relative group">
-            <div className="absolute inset-0 bg-[#19ffa2]/10 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="relative group w-full max-w-sm">
+            <div className="absolute inset-0 bg-[#19ffa2]/10 rounded-3xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <img 
               src="https://dominus.site/slides/mariana/img/gil.png"
               alt="Gilberto Ortiz"
               referrerPolicy="no-referrer"
-              className="w-36 h-36 md:w-40 md:h-40 rounded-2xl object-cover relative border border-white/10 hover:border-[#19ffa2]/30 transition-all duration-300 shadow-2xl"
+              className="w-full aspect-square rounded-3xl object-cover relative border border-white/10 hover:border-[#19ffa2]/30 transition-all duration-300 shadow-2xl"
             />
           </div>
           <div className="space-y-1">
@@ -40,13 +40,13 @@ export default function Dobra1Hero({ onNext }: Props) {
 
         {/* Felipe Column */}
         <div className="flex flex-col items-center space-y-3">
-          <div className="relative group">
-            <div className="absolute inset-0 bg-[#19ffa2]/10 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="relative group w-full max-w-sm">
+            <div className="absolute inset-0 bg-[#19ffa2]/10 rounded-3xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <img 
               src="https://dominus.site/slides/mariana/img/felipe.jpg"
               alt="Felipe Martins"
               referrerPolicy="no-referrer"
-              className="w-36 h-36 md:w-40 md:h-40 rounded-2xl object-cover relative border border-white/10 hover:border-[#19ffa2]/30 transition-all duration-300 shadow-2xl"
+              className="w-full aspect-square rounded-3xl object-cover relative border border-white/10 hover:border-[#19ffa2]/30 transition-all duration-300 shadow-2xl"
             />
           </div>
           <div className="space-y-1">

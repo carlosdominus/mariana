@@ -5,7 +5,8 @@ import Dobra1Hero from "./components/Dobra1Hero";
 import Dobra2VSL from "./components/Dobra2VSL";
 import Dobra3Upsell from "./components/Dobra3Upsell";
 import Dobra4Equipe from "./components/Dobra4Equipe";
-import Dobra5GanchosQA from "./components/Dobra5GanchosQA";
+import Dobra5Oferta from "./components/Dobra5Oferta";
+import Dobra6Pitch from "./components/Dobra6Pitch";
 
 export default function App() {
   const [activeLever, setActiveLever] = useState<number>(1);
@@ -27,7 +28,8 @@ export default function App() {
   const navLinks = [
     { label: "Quem Somos", href: "#faturamento" },
     { label: "O Método VSL", href: "#vsl" },
-    { label: "Aplicando para Você", href: "#ganchos" },
+    { label: "A Parceria", href: "#oferta" },
+    { label: "Proposta", href: "#proposta" },
   ];
 
   return (
@@ -70,10 +72,10 @@ export default function App() {
             {/* Quick action white action button */}
             <div className="flex items-center">
               <a 
-                href="#ganchos"
+                href="#proposta"
                 className="px-6 py-2 bg-white text-black text-xs font-bold rounded-full border border-white hover:bg-black hover:text-[#F1F1F1] hover:border-white/20 transition-all duration-300 active:scale-95 cursor-pointer"
               >
-                Contato
+                Proposta
               </a>
             </div>
 
@@ -126,20 +128,28 @@ export default function App() {
         </section>
 
         {/* 4th dob - Quem Somos & Virtual Workspace Office */}
-        <section id="equipe" className="scroll-mt-28 py-12 lg:py-20 border-b border-zinc-900/50 bg-zinc-950/20">
+        <section id="equipe" className="scroll-mt-28">
+          <Dobra4Equipe
+            onNext={() => document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" })}
+            onPrev={() => document.getElementById("upsell")?.scrollIntoView({ behavior: "smooth" })}
+          />
+        </section>
+
+        {/* 5th dob - A Parceria e Escopo de Trabalho */}
+        <section id="oferta" className="scroll-mt-28 py-12 lg:py-20 border-b border-zinc-900/50">
           <div className="max-w-6xl mx-auto px-4">
-            <Dobra4Equipe
-              onNext={() => document.getElementById("ganchos")?.scrollIntoView({ behavior: "smooth" })}
-              onPrev={() => document.getElementById("upsell")?.scrollIntoView({ behavior: "smooth" })}
+            <Dobra5Oferta
+              onNext={() => document.getElementById("proposta")?.scrollIntoView({ behavior: "smooth" })}
+              onPrev={() => document.getElementById("equipe")?.scrollIntoView({ behavior: "smooth" })}
             />
           </div>
         </section>
 
-        {/* 5th dob - Regra dos 3 Segundos & Interactive Diagnostic Setup */}
-        <section id="ganchos" className="scroll-mt-28 py-12 lg:py-24">
+        {/* 6th dob - Simulador de Alocação de Ganhos e Pitch Final */}
+        <section id="proposta" className="scroll-mt-28 py-12 lg:py-24 bg-zinc-950/20">
           <div className="max-w-6xl mx-auto px-4">
-            <Dobra5GanchosQA
-              onPrev={() => document.getElementById("equipe")?.scrollIntoView({ behavior: "smooth" })}
+            <Dobra6Pitch
+              onPrev={() => document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" })}
             />
           </div>
         </section>

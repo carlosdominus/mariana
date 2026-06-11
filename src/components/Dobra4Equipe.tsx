@@ -67,15 +67,17 @@ export default function Dobra4Equipe({ onNext }: Props) {
         <div className="flex flex-col space-y-6">
           
           {/* Header section with Instagram Link */}
-          <div className="flex items-center justify-between gap-4 h-[40px]">
-            <h3 className="text-xl md:text-2xl font-heading font-extrabold uppercase text-white tracking-wide">
-              Seus melhores conteúdos
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1">
+            <h3 className="text-xl md:text-2xl lg:text-[26px] font-heading font-extrabold uppercase text-white tracking-wide leading-[1.1]">
+              Os melhores<br />
+              conteúdos do<br />
+              seu perfil.
             </h3>
             <a 
               href="https://www.instagram.com/maricontinonutri/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#19ffa2] hover:text-white transition flex items-center gap-1.5 bg-[#19ffa2]/10 px-3 py-1 rounded-full border border-[#19ffa2]/20 shrink-0"
+              className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#19ffa2] hover:text-white transition flex items-center gap-1.5 bg-[#19ffa2]/10 px-3 py-1 rounded-full border border-[#19ffa2]/20 shrink-0 self-start sm:self-auto"
             >
               <Instagram size={11} />
               <span>@maricontinonutri</span>
@@ -83,21 +85,19 @@ export default function Dobra4Equipe({ onNext }: Props) {
           </div>
 
           {/* Mariana's Full Profile Image (mari.png) - Clickable to Instagram */}
-          <div className="h-[200px] sm:h-[240px] md:h-[270px] w-full rounded-2xl overflow-hidden border border-white/10 bg-black/40 flex items-center justify-center">
-            <a 
-              href="https://www.instagram.com/maricontinonutri/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full h-full select-none"
-            >
-              <img 
-                src="https://dominus.site/slides/mariana/img/mari.png" 
-                alt="Mariana Contin Profile"
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-contain object-center transition-transform duration-500 hover:scale-[1.01]"
-              />
-            </a>
-          </div>
+          <a 
+            href="https://www.instagram.com/maricontinonutri/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full select-none"
+          >
+            <img 
+              src="https://dominus.site/slides/mariana/img/mari.png" 
+              alt="Mariana Contin Profile"
+              referrerPolicy="no-referrer"
+              className="w-full h-auto object-contain transition-transform duration-500 hover:scale-[1.01]"
+            />
+          </a>
 
           {/* Mariana's Content Carousel */}
           <div className="h-[400px] sm:h-[460px] md:h-[510px] flex flex-col justify-between rounded-2xl bg-black/40 border border-white/10 p-3 relative group">
@@ -161,15 +161,17 @@ export default function Dobra4Equipe({ onNext }: Props) {
         <div className="flex flex-col space-y-6">
           
           {/* Header section with Instagram Link */}
-          <div className="flex items-center justify-between gap-4 h-[40px]">
-            <h3 className="text-xl md:text-2xl font-heading font-extrabold uppercase text-white tracking-wide">
-              Porque os grandes perfís sempre viralizam?
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1">
+            <h3 className="text-xl md:text-2xl lg:text-[26px] font-heading font-extrabold uppercase text-white tracking-wide leading-[1.1]">
+              Porque grandes<br />
+              perfís sempre<br />
+              viralizam?
             </h3>
             <a 
               href="https://www.instagram.com/onutridasestrelas/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#19ffa2] hover:text-white transition flex items-center gap-1.5 bg-[#19ffa2]/10 px-3 py-1 rounded-full border border-[#19ffa2]/20 shrink-0"
+              className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#19ffa2] hover:text-white transition flex items-center gap-1.5 bg-[#19ffa2]/10 px-3 py-1 rounded-full border border-[#19ffa2]/20 shrink-0 self-start sm:self-auto"
             >
               <Instagram size={11} />
               <span>@onutridasestrelas</span>
@@ -177,21 +179,19 @@ export default function Dobra4Equipe({ onNext }: Props) {
           </div>
 
           {/* Bruno's Full Profile Image (bruno.png) - Clickable to Instagram */}
-          <div className="h-[200px] sm:h-[240px] md:h-[270px] w-full rounded-2xl overflow-hidden border border-white/10 bg-black/40 flex items-center justify-center">
-            <a 
-              href="https://www.instagram.com/onutridasestrelas/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full h-full select-none"
-            >
-              <img 
-                src="https://dominus.site/slides/mariana/img/bruno.png" 
-                alt="Bruno Goytacaz Profile"
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-contain object-center transition-transform duration-500 hover:scale-[1.01]"
-              />
-            </a>
-          </div>
+          <a 
+            href="https://www.instagram.com/onutridasestrelas/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full select-none"
+          >
+            <img 
+              src="https://dominus.site/slides/mariana/img/bruno.png" 
+              alt="Bruno Goytacaz Profile"
+              referrerPolicy="no-referrer"
+              className="w-full h-auto object-contain transition-transform duration-500 hover:scale-[1.01]"
+            />
+          </a>
 
           {/* Bruno's Content Carousel */}
           <div className="h-[400px] sm:h-[460px] md:h-[510px] flex flex-col justify-between rounded-2xl bg-black/40 border border-white/10 p-3 relative group">
