@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight, Instagram, TrendingUp, Sparkles, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Instagram, Sparkles, ArrowRight } from "lucide-react";
 
 interface Props {
   onNext: () => void;
@@ -7,113 +7,125 @@ interface Props {
 }
 
 export default function Dobra4Equipe({ onNext }: Props) {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlideMari, setCurrentSlideMari] = useState(0);
+  const [currentSlideBruno, setCurrentSlideBruno] = useState(0);
 
-  const slides = [
-    {
-      img: "https://dominus.site/slides/mariana/img/110k.png",
-      title: "Post de Sucesso: Sentada em Consulta",
-      badge: "🔥 110k Visualizações",
-      subtitle: "Formato Autoridade Premium + Dor Clara",
-      description: "Seu melhor desempenho orgânico. Posicionamento profissional intocável que gerou conexão imediata com quem tem rotina corrida e deseja emagrecer.",
-    },
-    {
-      img: "https://dominus.site/slides/mariana/img/4k.png",
-      title: "Quebra de Ritmo (Vago)",
-      badge: "⚠️ 4k | Forra do Algoritmo",
-      subtitle: "Mostrar na explicação porque não deu certo",
-      description: "Replicação tardia (3 semanas depois) com promessa diluída ('4 refeições que eu faria') em vez de focar na dor principal. Sem gancho, o algoritmo congelou a entrega.",
-    },
-    {
-      img: "https://dominus.site/slides/mariana/img/29.9k.png",
-      title: "Top 10 Alimentos & Dicas",
-      badge: "💡 29.9k | Educacional Prático",
-      subtitle: "Foco em Utilidade e Salvamento",
-      description: "Nível técnico primoroso. Retém o público qualificado pela utilidade extrema das dicas, mas precisa de ganchos iniciais de 3 segundos para quebrar padrão de scroll.",
-    },
+  const mariSlides = [
+    "https://dominus.site/slides/mariana/img/110k.png",
+    "https://dominus.site/slides/mariana/img/4k.png",
+    "https://dominus.site/slides/mariana/img/29.9k.png",
   ];
 
-  const nextSlide = (e: React.MouseEvent) => {
+  const brunoSlides = [
+    "https://dominus.site/slides/mariana/img/exemplo1.png",
+  ];
+
+  const nextMari = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlideMari((prev) => (prev + 1) % mariSlides.length);
   };
 
-  const prevSlide = (e: React.MouseEvent) => {
+  const prevMari = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlideMari((prev) => (prev - 1 + mariSlides.length) % mariSlides.length);
+  };
+
+  const nextBruno = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentSlideBruno((prev) => (prev + 1) % brunoSlides.length);
+  };
+
+  const prevBruno = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentSlideBruno((prev) => (prev - 1 + brunoSlides.length) % brunoSlides.length);
   };
 
   return (
-    <div className="relative text-white py-12 md:py-20">
-      
+    <div 
+      className="relative text-white py-12 md:py-24 bg-gradient-to-b from-[#020d08] via-[#052b1b] to-[#010604] border-y border-[#19ffa2]/15 overflow-hidden" 
+      id="dobra4-container"
+    >
+      {/* Decorative background lights */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#19ffa2]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#19ffa2]/5 rounded-full blur-[100px] pointer-events-none" />
+
       {/* Category Header Badge */}
-      <div className="space-y-6 max-w-4xl mx-auto text-center mb-12 md:mb-16">
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#19ffa2]/10 border border-[#19ffa2]/20 text-[#19ffa2] text-[10px] font-bold tracking-widest rounded-full uppercase font-mono">
+      <div className="relative z-10 space-y-4 max-w-4xl mx-auto text-center mb-10 md:mb-16 px-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#19ffa2]/10 border border-[#19ffa2]/35 text-[#19ffa2] text-[10px] font-bold tracking-widest rounded-full uppercase font-mono">
           <Sparkles size={11} className="animate-pulse" />
           Estudo de Caso Prático
         </div>
-        <h2 className="text-3xl md:text-5xl font-heading font-extrabold uppercase tracking-tight leading-none text-white">
+        <h2 className="text-3xl md:text-5.5xl font-heading font-extrabold uppercase tracking-tight leading-none text-white">
           Exemplos na Prática
         </h2>
-        <p className="font-sans text-zinc-400 text-xs md:text-sm leading-relaxed max-w-xl mx-auto">
-          Analisando a diferença crítica entre produzir posts esporádicos e estruturar funis virais consistentes.
-        </p>
       </div>
 
       {/* Main Grid: Mariana on the Left, Bruno on the Right */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start max-w-6xl mx-auto px-4">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto px-4 items-stretch">
         
-        {/* Left Column: Mariana's Contents with Interactive Carousel */}
-        <div className="bg-zinc-950/40 border border-white/5 p-6 md:p-8 rounded-3xl space-y-6 shadow-2xl flex flex-col justify-between min-h-[640px]">
+        {/* Left Column: Mariana Contin */}
+        <div className="flex flex-col space-y-6">
           
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <h3 className="text-xl md:text-2xl font-heading font-extrabold uppercase text-white tracking-wide">
-                Seus Melhores Conteúdos
-              </h3>
-              <a 
-                href="https://www.instagram.com/maricontinonutri/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#19ffa2]/80 hover:text-white transition flex items-center gap-1 bg-white/5 px-2.5 py-1 rounded-full border border-white/10 shrink-0"
-              >
-                <Instagram size={11} />
-                <span>@maricontinonutri</span>
-              </a>
-            </div>
-            <p className="font-sans text-xs text-zinc-400 leading-relaxed font-normal">
-              Clique na imagem para abrir o Instagram ou utilize os controles abaixo para analisar cada uma das postagens.
-            </p>
-          </div>
-
-          {/* Interactive Carousel Frame */}
-          <div className="relative group overflow-hidden rounded-2xl bg-black/40 border border-white/10 p-2 flex flex-col justify-center">
-            
-            {/* Main Interactive Slide Image Wrapper */}
+          {/* Header section with Instagram Link */}
+          <div className="flex items-center justify-between gap-4 h-[40px]">
+            <h3 className="text-xl md:text-2xl font-heading font-extrabold uppercase text-white tracking-wide">
+              Seus melhores conteúdos
+            </h3>
             <a 
               href="https://www.instagram.com/maricontinonutri/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative block w-full overflow-hidden rounded-xl border border-white/5 select-none bg-zinc-950"
+              className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#19ffa2] hover:text-white transition flex items-center gap-1.5 bg-[#19ffa2]/10 px-3 py-1 rounded-full border border-[#19ffa2]/20 shrink-0"
+            >
+              <Instagram size={11} />
+              <span>@maricontinonutri</span>
+            </a>
+          </div>
+
+          {/* Mariana's Full Profile Image (mari.png) - Clickable to Instagram */}
+          <div className="h-[200px] sm:h-[240px] md:h-[270px] w-full rounded-2xl overflow-hidden border border-white/10 bg-black/40 flex items-center justify-center">
+            <a 
+              href="https://www.instagram.com/maricontinonutri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full select-none"
             >
               <img 
-                src={slides[currentSlide].img}
-                alt={slides[currentSlide].title}
+                src="https://dominus.site/slides/mariana/img/mari.png" 
+                alt="Mariana Contin Profile"
                 referrerPolicy="no-referrer"
-                className="w-full h-auto max-h-[380px] object-contain block mx-auto transition-all duration-300 group-hover:scale-[1.01]"
+                className="w-full h-full object-contain object-center transition-transform duration-500 hover:scale-[1.01]"
+              />
+            </a>
+          </div>
+
+          {/* Mariana's Content Carousel */}
+          <div className="h-[400px] sm:h-[460px] md:h-[510px] flex flex-col justify-between rounded-2xl bg-black/40 border border-white/10 p-3 relative group">
+            
+            {/* Main Slide Image */}
+            <a 
+              href="https://www.instagram.com/maricontinonutri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block w-full h-[calc(100%-46px)] overflow-hidden rounded-xl bg-zinc-950/40 border border-white/5"
+            >
+              <img 
+                src={mariSlides[currentSlideMari]}
+                alt={`Conteúdo Mariana ${currentSlideMari + 1}`}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain block mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
               />
               
-              {/* Instagram link overlay watermark hint */}
-              <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-[8.5px] font-mono text-[#19ffa2] uppercase bg-[#19ffa2]/10 border border-[#19ffa2]/20 rounded-lg px-2 py-0.5 pointer-events-none tracking-wider">
+              <div className="absolute top-3 right-3 bg-black/85 backdrop-blur-md text-[8.5px] font-mono text-[#19ffa2] uppercase border border-[#19ffa2]/25 rounded-lg px-2.5 py-1 tracking-wider font-bold shadow-lg">
                 Ver no Instagram ↗
               </div>
-            </a >
+            </a>
 
-            {/* Slider Controls Overlay to avoid blocking image click */}
-            <div className="flex items-center justify-between mt-4 px-2">
+            {/* Slider Controls */}
+            <div className="flex items-center justify-between h-[36px] mt-2 px-1">
               <button 
-                onClick={prevSlide}
-                className="p-2 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#19ffa2] transition active:scale-95 cursor-pointer"
+                onClick={prevMari}
+                className="p-1.5 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#19ffa2] transition active:scale-95 cursor-pointer"
                 title="Slide Anterior"
               >
                 <ChevronLeft size={16} />
@@ -121,20 +133,20 @@ export default function Dobra4Equipe({ onNext }: Props) {
 
               {/* Dot Indicators */}
               <div className="flex items-center gap-1.5">
-                {slides.map((_, idx) => (
+                {mariSlides.map((_, idx) => (
                   <button 
                     key={idx}
-                    onClick={() => setCurrentSlide(idx)}
+                    onClick={() => setCurrentSlideMari(idx)}
                     className={`h-1.5 rounded-full transition-all duration-300 ${
-                      currentSlide === idx ? "w-6 bg-[#19ffa2]" : "w-1.5 bg-zinc-700 hover:bg-zinc-600"
+                      currentSlideMari === idx ? "w-6 bg-[#19ffa2]" : "w-1.5 bg-zinc-700 hover:bg-zinc-600"
                     }`}
                   />
                 ))}
               </div>
 
               <button 
-                onClick={nextSlide}
-                className="p-2 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#19ffa2] transition active:scale-95 cursor-pointer"
+                onClick={nextMari}
+                className="p-1.5 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#19ffa2] transition active:scale-95 cursor-pointer"
                 title="Próximo Slide"
               >
                 <ChevronRight size={16} />
@@ -143,98 +155,98 @@ export default function Dobra4Equipe({ onNext }: Props) {
 
           </div>
 
-          {/* Current Slide Info Card */}
-          <div className="bg-black/60 border border-white/5 p-4 rounded-2xl space-y-2">
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/5 pb-2">
-              <h4 className="font-heading font-extrabold uppercase text-xs text-white tracking-wide">
-                {slides[currentSlide].title}
-              </h4>
-              <span className="text-[10px] font-mono text-[#19ffa2] bg-[#19ffa2]/10 border border-[#19ffa2]/20 px-2 py-0.5 rounded-full font-bold">
-                {slides[currentSlide].badge}
-              </span>
-            </div>
-            <p className="text-[10px] uppercase tracking-widest font-mono text-zinc-400 font-semibold">
-              {slides[currentSlide].subtitle}
-            </p>
-            <p className="font-sans text-xs text-zinc-450 leading-relaxed font-normal">
-              {slides[currentSlide].description}
-            </p>
-          </div>
-
         </div>
 
-        {/* Right Column: Bruno Goytacaz Strategy Details */}
-        <div className="bg-zinc-950/40 border border-white/5 p-6 md:p-8 rounded-3xl space-y-6 shadow-2xl flex flex-col justify-between min-h-[640px]">
+        {/* Right Column: Bruno Goytacaz */}
+        <div className="flex flex-col space-y-6">
           
-          <div className="space-y-3">
+          {/* Header section with Instagram Link */}
+          <div className="flex items-center justify-between gap-4 h-[40px]">
             <h3 className="text-xl md:text-2xl font-heading font-extrabold uppercase text-white tracking-wide">
-              Porque os grandes perfís viralizam?
+              Porque os grandes perfís sempre viralizam?
             </h3>
-            <p className="font-sans text-xs text-zinc-400 leading-relaxed">
-              Análise sistemática sobre consistência, replicação estrita de padrões de entrega e engenharia de retenção em escala.
-            </p>
+            <a 
+              href="https://www.instagram.com/onutridasestrelas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#19ffa2] hover:text-white transition flex items-center gap-1.5 bg-[#19ffa2]/10 px-3 py-1 rounded-full border border-[#19ffa2]/20 shrink-0"
+            >
+              <Instagram size={11} />
+              <span>@onutridasestrelas</span>
+            </a>
           </div>
 
-          {/* Bruno Goytacaz Profile Layout */}
-          <div className="bg-black/40 border border-white/10 rounded-2xl p-5 space-y-4">
-            
-            {/* Bruno Goytacaz Header Info resembling profile */}
-            <div className="flex items-center gap-4 border-b border-white/5 pb-4">
+          {/* Bruno's Full Profile Image (bruno.png) - Clickable to Instagram */}
+          <div className="h-[200px] sm:h-[240px] md:h-[270px] w-full rounded-2xl overflow-hidden border border-white/10 bg-black/40 flex items-center justify-center">
+            <a 
+              href="https://www.instagram.com/onutridasestrelas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full select-none"
+            >
               <img 
-                src="https://dominus.site/slides/mariana/img/bruno.png"
-                alt="Bruno Goytacaz Profile Image"
+                src="https://dominus.site/slides/mariana/img/bruno.png" 
+                alt="Bruno Goytacaz Profile"
                 referrerPolicy="no-referrer"
-                className="w-16 h-16 rounded-full border border-[#19ffa2]/30 object-cover p-0.5 shrink-0"
+                className="w-full h-full object-contain object-center transition-transform duration-500 hover:scale-[1.01]"
               />
-              <div className="space-y-1">
-                <div className="flex items-center gap-1.5 flex-wrap">
-                  <h4 className="font-heading font-extrabold uppercase text-sm text-white">
-                    Bruno Goytacaz
-                  </h4>
-                  <span className="text-[8px] uppercase tracking-widest font-mono font-bold px-1.5 py-0.5 bg-zinc-900 border border-white/10 text-zinc-400 rounded-md">
-                    Caso de Referência
-                  </span>
-                </div>
-                <p className="text-[10px] font-mono text-[#19ffa2] uppercase tracking-wider font-semibold">
-                  Mapeou o Formato Ideal • Escala Sequencial
-                </p>
-              </div>
-            </div>
-
-            {/* Strategic Analysis Content */}
-            <p className="font-sans text-xs md:text-sm text-zinc-300 leading-relaxed">
-              Identificou o formato campeão de comparação de alimentos e o replicou <strong className="text-white">IMEDIATAMENTE</strong> (usando o mesmo casaco, mesmo lugar, mesma iluminação) de forma inteligente para surfar a onda do algoritmo repetidas vezes em escala.
-            </p>
-
-            {/* Viral Sequence representation */}
-            <div className="space-y-3 pt-2">
-              <h5 className="text-[10px] font-mono uppercase tracking-widest text-[#19ffa2] font-semibold">
-                Análise da Sequência de Virais:
-              </h5>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="bg-zinc-950/80 border border-white/5 p-3 rounded-xl flex flex-col justify-between">
-                  <span className="text-[9px] text-zinc-400 font-mono tracking-wider uppercase block">Post de Gancho</span>
-                  <span className="text-white font-heading font-extrabold text-base md:text-lg">PROVA DE ALTA</span>
-                  <span className="text-[#19ffa2] text-[10px] font-mono mt-1 font-bold">Consistência Exata</span>
-                </div>
-                <div className="bg-zinc-950/80 border border-white/5 p-3 rounded-xl flex flex-col justify-between">
-                  <span className="text-[9px] text-zinc-400 font-mono tracking-wider uppercase block">Entrega Sequencial</span>
-                  <span className="text-white font-heading font-extrabold text-base md:text-lg font-mono">2M+ REACH</span>
-                  <span className="text-emerald-400 text-[10px] font-mono mt-1 font-bold">Sem Fricção de Modelo</span>
-                </div>
-              </div>
-            </div>
-
+            </a>
           </div>
 
-          <div className="bg-black/60 border border-white/5 p-4 rounded-2xl space-y-1">
-            <div className="flex items-center gap-2 text-white">
-              <TrendingUp size={13} className="text-[#19ffa2]" />
-              <span className="text-[10px] uppercase font-mono tracking-wider text-white font-bold">Visão de Conversão Dominus</span>
+          {/* Bruno's Content Carousel */}
+          <div className="h-[400px] sm:h-[460px] md:h-[510px] flex flex-col justify-between rounded-2xl bg-black/40 border border-white/10 p-3 relative group">
+            
+            {/* Main Slide Image */}
+            <a 
+              href="https://www.instagram.com/onutridasestrelas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block w-full h-[calc(100%-46px)] overflow-hidden rounded-xl bg-zinc-950/40 border border-white/5"
+            >
+              <img 
+                src={brunoSlides[currentSlideBruno]}
+                alt={`Conteúdo Bruno ${currentSlideBruno + 1}`}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain block mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
+              />
+              
+              <div className="absolute top-3 right-3 bg-black/85 backdrop-blur-md text-[8.5px] font-mono text-[#19ffa2] uppercase border border-[#19ffa2]/25 rounded-lg px-2.5 py-1 tracking-wider font-bold shadow-lg">
+                Ver no Instagram ↗
+              </div>
+            </a>
+
+            {/* Slider Controls */}
+            <div className="flex items-center justify-between h-[36px] mt-2 px-1">
+              <button 
+                onClick={prevBruno}
+                className="p-1.5 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 hover:text-[#19ffa2] transition active:scale-95 cursor-pointer"
+                title="Slide Anterior"
+              >
+                <ChevronLeft size={16} />
+              </button>
+
+              {/* Dot Indicators */}
+              <div className="flex items-center gap-1.5">
+                {brunoSlides.map((_, idx) => (
+                  <button 
+                    key={idx}
+                    onClick={() => setCurrentSlideBruno(idx)}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                      currentSlideBruno === idx ? "w-6 bg-[#19ffa2]" : "w-1.5 bg-zinc-750 hover:bg-zinc-650"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <button 
+                onClick={nextBruno}
+                className="p-1.5 rounded-xl bg-zinc-900 border border-[#19ffa2]/30 text-white hover:bg-zinc-850 hover:text-[#19ffa2] transition active:scale-95 cursor-pointer"
+                title="Próximo Slide"
+              >
+                <ChevronRight size={16} />
+              </button>
             </div>
-            <p className="font-sans text-[11px] text-zinc-400 leading-relaxed font-normal">
-              A diferença entre um perfil de alta autoridade estagnado e um negócio digital multimilionário escalando é a substituição do trabalho empírico por um funil planejado de VSL, mantendo a tração do público e monetizando o desejo de compra imediato de cada viral.
-            </p>
+
           </div>
 
         </div>
@@ -242,10 +254,10 @@ export default function Dobra4Equipe({ onNext }: Props) {
       </div>
 
       {/* Primary Transition Flow Interactive Button */}
-      <div className="pt-10 md:pt-14 text-center">
+      <div className="relative z-10 pt-12 md:pt-16 text-center">
         <button 
           onClick={onNext}
-          className="inline-flex items-center gap-2 px-8 py-3 bg-[#19ffa2] hover:bg-[#15db8b] text-black font-extrabold text-xs tracking-wider uppercase rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#19ffa2]/20 scale-100 hover:scale-[1.02] active:scale-[0.98] select-none cursor-pointer"
+          className="inline-flex items-center gap-2.5 px-8 py-3 bg-[#19ffa2] hover:bg-[#15db8b] text-black font-extrabold text-xs tracking-wider uppercase rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#19ffa2]/20 scale-100 hover:scale-[1.02] active:scale-[0.98] select-none cursor-pointer"
         >
           <span>Avançar</span>
           <ArrowRight size={13} className="text-black" />
